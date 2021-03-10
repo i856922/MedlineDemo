@@ -1,0 +1,19 @@
+ID: MedlineDemoGIT
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: MedlineGITDemoDB
+   type: hdb
+   path: MedlineGITDemoDB
+   requires:
+    - name: hdi_MedlineGITDemoDB
+
+resources:
+ - name: hdi_MedlineGITDemoDB
+   parameters:
+      config:
+         schema: MedlineGITDB
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
